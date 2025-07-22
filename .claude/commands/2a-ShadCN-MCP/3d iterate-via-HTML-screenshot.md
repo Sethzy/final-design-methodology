@@ -13,23 +13,25 @@ Take a screenshot of the current webpage using the browserMCP tool to establish 
 <step_2>
 <comparison>
 Compare the current screenshot with the provided mock design, analyzing:
+
 - Layout structure and positioning
 - Text content and typography
 - Spacing and padding
 - Visual elements and styling
 - Color schemes and visual hierarchy
-</comparison>
-</step_2>
+  </comparison>
+  </step_2>
 
 <step_3>
 <iteration>
 Make targeted adjustments to match the mock design:
+
 - Update component positioning and spacing
 - Adjust typography and text content
 - Modify visual styling and colors
 - Refine layout structure
-</iteration>
-</step_3>
+  </iteration>
+  </step_3>
 
 <step_4>
 Take another screenshot to verify improvements and identify remaining discrepancies.
@@ -58,10 +60,11 @@ Continue iterating until the webpage matches the mock design precisely.
 
 <success_criteria>
 The final webpage should:
+
 - Match the mock design's layout exactly
 - Replicate all text content and typography
 - Mirror spacing, padding, and visual hierarchy
 - Display identical visual elements and styling
 - Function responsively across devices
-</success_criteria>
-</task>
+  </success_criteria>
+  </task>

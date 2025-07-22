@@ -130,7 +130,7 @@
     - External research
     - use https://code2tutorial.com/ and https://gitingest.com/ and https://repomix.com/ to give examples
     - Use MCPs like the brave MCP to do extra research
-    - Use MCPs like context7 to organise.
+    - Use MCPs like context7 to get API docs.
 
 - [ ] **Requirements Documentation**
 

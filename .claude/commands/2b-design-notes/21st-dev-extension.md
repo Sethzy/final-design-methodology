@@ -1,6 +1,6 @@
 **Option 1: DIY and import via pnpm**
 
-Implement 21st dev component as a reference componenet using pnpm:
+Implement 21st dev component as a reference componenet using pnpm: Install all dependencies.
 Do not import it to the main app or override the exsiting component yet. We will handle this separately.
 
 Before importing it, examine the current coding patterns and tell me what complexity you foresee might occur when hooking up the logic.

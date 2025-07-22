@@ -1,163 +1,183 @@
-# 🛠️ **Prompt-Library Workflow Overview**
+# 🛠️ **Development Workflow Guide**
 
 ---
 
-- [ ] **Initialize in Lovable and pull to cursor:** Use the `initialize-Lovable-Project.md` file.
+## 🚀 **Phase 1: Project Initialization**
 
-Make sure the specifiy Tailwind v3, not 4.
+### 1.1 Setup New Project
 
-Port over to Cursor, initialise the git repo locally. Make sure the global cursor rules and Claude.MD rules are set properly to be automatically read. 
+- [ ] **Initialize in Lovable and pull to Cursor:** Use the `initialize-Lovable-Project.md` file
+  - Specify Tailwind v3, not v4
+  - Port over to Cursor and initialize the git repo locally
+  - Ensure global cursor rules and Claude.MD rules are properly configured for automatic reading
 
+### 1.2 CSS Configuration
 
-- [ ] Add CSS
-
-Find a TweakCN CSS file and immediately copy and paste it over to your index.css file.
-
-It should be in the correct tailwind version, and in HSL. Don't install it via pnpm. it seems to bug. 
-
-Use @1a. css-validation-tweakcn.md which contains the necessary instructions. 
-
-
-## 1. Product Roadmap Generation
-
-- [ ] Generate Product Roadmap:
-  - Use `generate-ProductRoadmap.mdc` to create the comprehensive product roadmap.
-- [ ] ~~**_Feature Selection for MVP:_**~~
-  - From the generated roadmap, select only the features essential for the **Minimum Viable Product (MVP)**.
+- [ ] **Add CSS Foundation**
+  - Find a TweakCN CSS file and copy it to your `index.css` file
+  - Ensure it's in the correct Tailwind version and uses HSL format
+  - **Don't install via pnpm** (it causes bugs)
+  - Use `@1a. css-validation-tweakcn.md` for necessary instructions
 
 ---
 
-##design 
+## 📋 **Phase 2: Product Planning**
 
-Based on the described MVP features and some screenshots, use @ 1b. generate-ui-implementation-plan.md
+### 2.1 Product Roadmap Development
 
-This will give a skeleton of all the UI elements that needs to be implemented. 
-
-make sure to reference 
-
-
-
-
-
-Then follow through 1a, 1b,1c,2a,2b. see shadcn-mcp-instructions. 
-
-
-## 2. Designer iteration. 
-
-
-
-- [ ] **Generate Designer Prompts:**
-  - Use `generateDesignerPrompt.mdc` to obtain initial Ui/Ux prompts for the selected MVP features.
-    - _If you need to manually specify in frontend language, check:_
-      - https://ui.shadcn.com/ documentation
-      - https://aura.build/learn/prompt-for-layout
-- [ ] **Prerequisite:**
-  - Ensure the corect `design.system` file is properly referenced before using `generateDesignerPrompt.mdc`.
-  - Generate alist of screens from the MVP features
+- [ ] **Generate Product Roadmap**
+  - Use `generate-ProductRoadmap.mdc` to create comprehensive product roadmap
+- [ ] **MVP Feature Selection**
+  - From the generated roadmap, select only features essential for the Minimum Viable Product (MVP)
 
 ---
 
-## 3. Initial Development Steps
+## 🎨 **Phase 3: Design Implementation**
 
-Use **Design-prompt** and
+### 3.1 HTML Prototype Development
 
-- [ ] **Create Global CSS File:**
-  - Develop the initial **CSS** file, specifically a global CSS file.
-- [ ] **Generate First HTML Screen:**
-  - Use the initial CSS file (based on the **design system**) to create the first **HTML** screen.
+- [ ] **Create UI Implementation Plan**
 
-> _This process is **iterative**, progressing from **low-fidelity wireframes** to a **high-fidelity** full HTML screen with Tailwind CSS._
+  - Based on MVP features and screenshots, use `@1b. generate-ui-implementation-plan.md`
+  - This creates a skeleton of all UI elements that need implementation
+  - Reference `2a.` and manually integrate CSS and design principles (not system)
 
----
+- [ ] **Create HTML Variants**
 
-## 4. Post HTML Screen Completion Workflow
+  - Use `2b` and `2c` to create variants in HTML
+  - This helps visualize and build out prototypes
+  - **Tip:** Use Stagewise or Lovable's UI to select elements before making changes
 
-- [ ] **Capture Screenshots:**
-  - Take screenshots of all completed screens.
-- [ ] **Store Screenshots:**
-  - Place these screenshots in the `screenshots` folder within the `design HTML library` folder.
-- [ ] **Purpose:**
-  - These screenshots will serve as a reference for lovable.
+- [ ] **Review HTML Mockups**
+  - Validate the HTML prototypes before proceeding
 
----
+### 3.2 ShadCN Implementation
 
-## 5. Updating the Design Prompt
+- [ ] **Create ShadCN Implementation Plan**
 
-- [ ] **Locate:**
-  - Find the "design prompt library" folder.
-- [ ] **Action:**
-  - Update the design prompt within this folder.
-- [ ] **Purpose:**
-  - Incorporate the changes made during the iterative design process with HTML back into the prompt.
+  - Use `2d` with finalized HTML prototype, screenshots, design system, and CSS
+  - **Important:** Feed information step-by-step to prevent context overload
 
----
+- [ ] **Integrate ShadCN Components**
 
-## 6. Initialize the `lovable` Project
+  - Update plan with `3a` to use ShadCN components via MCP
 
-- [ ] **Initialize:**
-  - Use the `initialize-Lovable-Project.md` file.
-- [ ] **Design System Integration:**
-  - Reference the same design system to `lovable`.
-- [ ] **CSS File Creation:**
-  - Reference the necessary **CSS file**.
-- [ ] **UI/UX Development:**
-  - Begin creating the **UI/UX screen by screen** using the **updated Ui/Ux prompt for the feature**.
-    - Reference the **HTML code**.
-    - Reference the **screenshots**.
+- [ ] **Enhance Implementation Details**
 
-> _Tip: Use Stagewise or Lovable's UI to pick the element before asking it to make changes so it knows which file to use._
+  - Use `3b` to focus on more detailed implementation
+
+- [ ] **Ship with ShadCN**
+  - Finalize with `3c` using ShadCN MCP and instructions
+  - **Quality Check:** Verify all CSS and design system elements are properly applied
+  - **Tip:** Use Stagewise or Lovable's UI to select elements before making changes
+
+### 3.3 Advanced UI Extensions
+
+- [ ] **Add 21st-dev Extensions**
+  - Choose desired 21st dev UI components
+  - Use pnpm to manually change components
+  - **Avoid 'copy prompt'** - manually create reference components, import, and update
 
 ---
 
-## 7. Post-Screen Completion Workflow (Lovable)
+## 🚢 **Phase 4: Deployment & Version Control**
 
-- [ ] **Push to GitHub:**
-  - After completing the first screen, **push** the changes to GitHub.
-- [ ] **Pull into Cursor:**
-  - Once pushed, **pull** that screen into Cursor.
-- [ ] **UI/UX Modifications:**
-  - Make any necessary **UI/UX changes** within Cursor.
+### 4.1 Post-Screen Completion Workflow (Lovable)
 
----
+- [ ] **Code Quality & Documentation**
 
-## 8. Post-MVP Screens Development Checklist
+  - Refactor code using `cursor-auto-refactoring-codebase.md`
+  - Add documentation using `add.JSDOC.md`
+  - Generate README using `generate-read-me.md` or repomix
+  - Update repo with improved cursor and claude.md rules using repomix
 
-- [ ] **Authentication Setup:**
-  - Implement user authentication.
-- [ ] **Payment Integration:**
-  - Set up payments via **Lovable**.
-  - Direct integration with **Supabase** and **Stripe**.
+- [ ] **Version Control Management**
+  - Push changes to GitHub after completing the first screen
+  - Push into Lovable
 
 ---
 
-## 9. Backend Logic
+## 🏗️ **Phase 5: Post-MVP Development**
 
-- [ ] **Start backend logic**
-  - [ ] Run `create research doc.mdc` (if feature is complex, else skip to generate PRD)
-    - [ ] Internal evaluation of the codebase
-    - [ ] External research
-  - [ ] Use `generate PRD document` (after research document output is complete)
-    - [ ] Detail implementation for the feature
-  - [ ] Use `generate tasks from PRD.mdc` (once PRD is satisfactory)
-    - [ ] Generate a task list
-  - [ ] Use `task list.mdc`
-    - [ ] Execute tasks (tell AI how to execute)
+### 5.1 Core Infrastructure Setup
+
+- [ ] **Authentication Setup**
+
+  - Implement user authentication system
+
+- [ ] **Database Configuration**
+
+  - Create database using Supabase
+
+- [ ] **Payment Integration**
+
+  - Set up payments via Lovable
+  - Direct integration with Supabase and Stripe
+
+- [ ] **Email Integration**
+  - Add Resend email integration
 
 ---
-Update the repo with improved cursor and claude.md rules using repomix 
 
-https://repomix.com
+## ⚙️ **Phase 6: Backend Development**
 
-Use this to turn it into ur Claude code rules  
+### 6.1 Backend Logic Implementation
 
+- [ ] **Research Phase**
 
+  - Run `create research doc.mdc` (skip to PRD if feature is simple)
+    - Internal evaluation of the codebase
+    - External research
+    - use https://code2tutorial.com/ and https://gitingest.com/ and https://repomix.com/ to give examples
+    - Use MCPs like the brave MCP to do extra research
+    - Use MCPs like context7 to organise.
 
+- [ ] **Requirements Documentation**
 
-## 10. General Guidelines
+  - Use `generate PRD document` (after research document completion)
+    - Detail implementation for the feature
 
-- [ ] **Always create a README file** after completing any major task. Use `generate-read-me.mdc`.
-- [ ] **Commit locally** on Git frequently. Things will break.
-- [ ] **Use voice dictation**
-- [ ] **Do not commit to your remote repository** unless you are confident you've hit a **real checkpoint**.
-- [ ] **Be aware of the conflict between Lovable and Cursor.**
-  - Forgetting to pull will cause bugs.
+- [ ] **Task Generation**
+
+  - Use `generate tasks from PRD.mdc` (once PRD is satisfactory)
+    - Generate comprehensive task list
+
+- [ ] **Task Execution**
+  - Use `task list.mdc`
+    - Execute tasks (provide AI with execution guidance)
+
+### 6.2 Post-Backend Development Workflow
+
+- [ ] **Code Quality & Documentation**
+  - Refactor code using `cursor-auto-refactoring-codebase.md`
+  - Add documentation using `add.Docstring.md`
+  - Generate README using `generate-read-me.md` or repomix
+  - Update repo with improved cursor and claude.md rules using repomix
+  - Reference: [Repomix](https://repomix.com)
+
+### 6.3 Testing Implementation
+
+- [ ] **Unit Testing Setup**
+  - Configure Jest/Vitest for component testing
+  - Aim for 80%+ test coverage on critical business logic
+
+---
+
+## 📚 **General Guidelines & Best Practices**
+
+### Development Standards
+
+- [ ] **Always create a README file** after completing major tasks using `generate-read-me.mdc`
+- [ ] **Commit locally** to Git frequently - things will break
+- [ ] **Use voice dictation** for efficiency
+
+### Version Control Best Practices
+
+- [ ] **Be cautious with remote commits** - only commit when confident you've reached a real checkpoint
+- [ ] **Manage Lovable-Cursor conflicts** - forgetting to pull will cause bugs
+
+### Workflow Efficiency
+
+- [ ] Use Stagewise or Lovable's UI to select elements before requesting changes
+- [ ] Feed information step-by-step to prevent AI context overload
+- [ ] Manually create and import reference components rather than using 'copy prompt'
